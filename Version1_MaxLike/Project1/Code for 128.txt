@@ -1,0 +1,125 @@
+//----------------------------------------------------------------------------
+// C main line
+//----------------------------------------------------------------------------
+
+#include <m8c.h>        // part specific constants and macros.
+#include "PSoCAPI.h"    // PSoC API definitions for all User Modules.
+#include "stdio.h"
+#include "fft.h"
+int  max;
+char df[4],max1[4];
+unsigned int i=0,h=0,j=0,m=0;         //index
+unsigned int ind; 
+//int  delta_f;
+//unsigned int N_samples=7800;
+double  time;    // time record
+char *volt;
+int k=0,maxx[128],pos[128];
+void LCD_print()
+{         
+
+        max=mod[1];        
+        ind=1;
+	    for(m=2;m<N_points;m++)
+        	if(mod[m]>max)
+        		{
+        		  max=mod[m];
+        		  ind=m;
+         		 }
+		maxx[k] = max;
+		pos[k] = ind;
+		itoa(max1,(int)(max),8);
+		LCD_Position(0,0);
+		LCD_PrHexInt(k);
+        for(i=0;i<N_points;i++)
+        	
+        		{
+///        			LCD_Position(0,0);
+////        			LCD_PrHexInt(max);
+//        		    LCD_Position(0,7);
+//        			LCD_PrHexInt(ind);
+					itoa(df,(int)(mod[i]),7);
+        			LCD_Position(1,0);
+        			//LCD_PrString(df);
+					LCD_PrHexInt(mod[i]);
+					//LCD_Position(1,6);
+     				//LCD_PrCString("Hz");
+					LCD_Position(1,7);
+        			LCD_PrHexInt(i);
+					for (h=0;h<100;h++);
+         		 }
+ }
+
+void main(void)
+{
+	char str[15];
+	int iData,j,a=0;
+	LCD_Start();
+	PGA_1_Start(PGA_1_HIGHPOWER);
+	PGA_2_Start(PGA_2_HIGHPOWER);
+	LPF2_3_Start(LPF2_3_HIGHPOWER);
+	i=0;
+    M8C_EnableGInt;                     // Enable global interrupts
+	ADCINCVR_Start(ADCINCVR_HIGHPOWER); // Turn on Analog section
+    ADCINCVR_SetResolution(7);         // Set resolution to 7 Bits
+    ADCINCVR_GetSamples(0); 
+	//time=(double)N_points/N_samples;
+    //delta_f=(double)1/time;
+    //itoa(df,(int)delta_f,10);
+	i=0;
+    while (1)// Main loop 
+    {   
+		//for (h=0;h<40000;h++);
+	 	if(ADCINCVR_fIsDataAvailable()) // Wait for data to 
+        {                                      // be ready.
+        	data_re[i] = ADCINCVR_iGetData();    // Get Data		
+			ADCINCVR_ClearFlag();
+			i++;
+		}
+
+		if (i==N_points)
+		{
+			 FFT(1,exponent,data_re,data_imm );
+			 if(a==40)
+        		{
+            	while (1)
+				{
+					 max=mod[1];        
+        			 ind=1;
+	    			 for(m=2;m<N_points;m++)
+        			 if(mod[m]>max)
+        			{
+        		  		max=mod[m];
+        		  		ind=m;
+         		 	}
+					LCD_Position(1,0);
+					LCD_PrHexInt(max);
+					LCD_Position(1,7);
+					LCD_PrHexInt(ind);
+					for (j=0;j<128;j++)
+					{
+						LCD_Position(0,0);
+						LCD_PrHexInt(mod[j]);
+	        			LCD_Position(0,7);
+	        			LCD_PrHexInt(j);
+						for (h=0;h<40000;h++);
+						for (h=0;h<40000;h++);
+						for (h=0;h<40000;h++);
+					}
+				}
+       		}
+		 	for(i=0;i<N_points;i++)
+         	{  	
+            	mod[i]=0;       //init 0
+            	data_re[i]=0;
+            	data_imm[i]=0;
+            }
+			i=0;
+			LCD_Position(1,0);
+			LCD_PrHexInt(a);
+	        a++;
+		}
+           
+		
+}      
+}

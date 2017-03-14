@@ -1,0 +1,24 @@
+flash 5608 SRAM    B:
+ 00 128 bytes
+flash 560C SRAM   9A:
+ 00 57 bytes
+flash 5610 SRAM   D3:
+ <size at next line>  34 12
+  [size:] 2 bytes
+flash 5615 SRAM   D5:
+ 00 34 bytes
+flash 5619 SRAM  100:
+ 00 255 bytes
+flash 561D SRAM  1FF:
+ 00 255 bytes
+flash 5621 SRAM  2FE:
+ 00 255 bytes
+flash 5625 SRAM  3FD:
+ 00 255 bytes
+flash 5629 SRAM  4FC:
+ 00 255 bytes
+flash 562D SRAM  5FB:
+ 00 156 bytes
+flash 5631 SRAM  697:
+ <size at next line>   A  0  5  0  2  0  0
+  [size:] 7 bytes

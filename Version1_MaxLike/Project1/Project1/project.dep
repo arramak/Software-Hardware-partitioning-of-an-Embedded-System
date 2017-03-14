@@ -1,0 +1,67 @@
+# DO NOT DELETE
+./obj/boot.o : \
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8ssc.inc\
+   C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\VERSIO~1\Project1\Project1\lib\GLOBAL~1.INC\
+   C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\VERSIO~1\Project1\Project1\memory.inc
+./obj/main.o :  ./lib/DUALADC.h ./lib/LCD.h ./lib/LPF2_1.h\
+   ./lib/LPF2_3.h ./lib/PGA_1.h ./lib/PGA_2.h ./lib/PGA_3.h\
+   ./lib/PGA_4.h ./lib/PSoCAPI.h ./lib/PSOCGP~1.H ./lib/Timer.h\
+   ./lib/UART.h\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/M8C.h\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8C.h\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8c.h\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/_const.h\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/limits.h\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/math.h\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/stdarg.h\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/stdio.h\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/stdlib.h\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/string.h\
+   C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\VERSIO~1\Project1\Project1\fft.h
+./obj/timerisr.o : 
+./lib/obj/dualadc.o :  ./lib/DUALADC.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\VERSIO~1\Project1\Project1\memory.inc
+./lib/obj/dualadcint.o :  ./lib/DUALADC.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\VERSIO~1\Project1\Project1\memory.inc
+./lib/obj/lcd.o :  ./lib/LCD.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\VERSIO~1\Project1\Project1\memory.inc
+./lib/obj/lpf2_1.o :  ./lib/LPF2_1.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\VERSIO~1\Project1\Project1\memory.inc
+./lib/obj/lpf2_3.o :  ./lib/LPF2_3.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\VERSIO~1\Project1\Project1\memory.inc
+./lib/obj/pga_1.o :  ./lib/PGA_1.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\VERSIO~1\Project1\Project1\memory.inc
+./lib/obj/pga_2.o :  ./lib/PGA_2.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\VERSIO~1\Project1\Project1\memory.inc
+./lib/obj/pga_3.o :  ./lib/PGA_3.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\VERSIO~1\Project1\Project1\memory.inc
+./lib/obj/pga_4.o :  ./lib/PGA_4.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\VERSIO~1\Project1\Project1\memory.inc
+./lib/obj/psocconfig.o :  ./lib/GLOBAL~1.INC\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\VERSIO~1\Project1\Project1\memory.inc
+./lib/obj/psocconfigtbl.o : \
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc
+./lib/obj/timer.o :  ./lib/Timer.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\VERSIO~1\Project1\Project1\memory.inc
+./lib/obj/timerint.o :  ./lib/Timer.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\VERSIO~1\Project1\Project1\memory.inc
+./lib/obj/uart.o :  ./lib/UART.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\VERSIO~1\Project1\Project1\memory.inc
+./lib/obj/uartint.o :  ./lib/UART.inc\
+   C:/PROGRA~2/Cypress/PSOCDE~1/5.4/Common/CY110F~1/tools/include/CY8C29~1/m8c.inc\
+   C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\VERSIO~1\Project1\Project1\memory.inc
+./lib/obj/uartplus.o : 

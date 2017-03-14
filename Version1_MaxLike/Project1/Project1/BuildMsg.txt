@@ -1,0 +1,167 @@
+Starting MAKE...
+creating project.mk -- no changes
+
+lib/dualadc.asm
+
+lib/dualadcint.asm
+
+lib/lcd.asm
+
+lib/lpf2_1.asm
+
+lib/lpf2_3.asm
+
+lib/pga_1.asm
+
+lib/pga_2.asm
+
+lib/pga_3.asm
+
+lib/pga_4.asm
+
+lib/psocconfig.asm
+
+lib/psocconfigtbl.asm
+
+lib/timer.asm
+
+lib/timerint.asm
+
+lib/uart.asm
+
+lib/uartint.asm
+
+lib/uartplus.asm
+
+./boot.asm
+
+Linking..
+
+LMM info: area 'InterruptRAM' uses 11 bytes in SRAM bank 0
+
+LMM info: area 'data' item of 128 bytes allocated in SRAM page 0
+
+LMM info: area 'virtual_registers' uses 15 bytes in SRAM page 0
+
+LMM info: area 'data' item of 15 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 4 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 4 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 4 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 4 bytes allocated in SRAM page 0
+LMM info: area 'data' item of 4 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 4 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 4 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 0
+
+LMM info: area 'data' item of 256 bytes allocated in SRAM page 1
+
+LMM info: area 'data' item of 256 bytes allocated in SRAM page 2
+
+LMM info: area 'data' item of 256 bytes allocated in SRAM page 3
+
+LMM info: area 'data' item of 256 bytes allocated in SRAM page 4
+
+LMM info: area 'data' item of 256 bytes allocated in SRAM page 5
+
+LMM info: area 'data' item of 128 bytes allocated in SRAM page 6
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 6
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 6
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 6
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 6
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 6
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 6
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 6
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 6
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 6
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 6
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 6
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 6
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 6
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 6
+
+LMM info: area 'data' item of 2 bytes allocated in SRAM page 6
+
+idata dump at output/Project1.idata
+
+  ROM 66% full. 21608 out of 32768 bytes used (does not include absolute areas).
+
+  RAM 95% full. 1685 bytes used (does not include stack usage).
+
+Built with ICCM8C STD V7.05.00
+
+Cannot find source file 'C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c' for generating the .lst listing file
+
+The program executable output is not affected
+
+ 
+Project1 - 0 error(s) 0 warning(s) 19:47:09
+

@@ -1,0 +1,405 @@
+ 0000                   cpu LMM
+                        .module timerisr.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile ./timerisr.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile ./timerisr.c
+ 0000           _i_msec::
+ 0000 0000              .word 0
+ 0002                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+ 0002                   .dbsym e i_msec _i_msec i
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+ 0000           _i_sec::
+ 0000 0000              .word 0
+ 0002                   .dbsym e i_sec _i_sec i
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+ 0000           _i_min::
+ 0000 0000              .word 0
+ 0002                   .dbsym e i_min _i_min i
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+ 0000           _i_hour::
+ 0000 0000              .word 0
+ 0002                   .dbsym e i_hour _i_hour i
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+ 0000           _cnt_sec::
+ 0000 0000              .word 0
+ 0002                   .dbsym e cnt_sec _cnt_sec i
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+ 0000           _cnt_min::
+ 0000 0000              .word 0
+ 0002                   .dbsym e cnt_min _cnt_min i
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+ 0000           _cnt_hour::
+ 0000 0000              .word 0
+ 0002                   .dbsym e cnt_hour _cnt_hour i
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+ 0000           _downCount::
+ 0000 000A              .word 10
+ 0002                   .dbsym e downCount _downCount i
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+ 0000           _dumCount::
+ 0000 0005              .word 5
+ 0002                   .dbsym e dumCount _dumCount i
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+ 0000           _dispCount::
+ 0000 0002              .word 2
+ 0002                   .dbsym e dispCount _dispCount i
+                        .area data(ram, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile C:\Users\HARISH~1\Desktop\SEM1CO~1\566\Project3\Versions\Version1\Project1\Project1\timerisr.c
+ 0000                   .dbfunc e Timer_ISR _Timer_ISR fV
+ 0000           _Timer_ISR::
+ 0000                   .dbline -1
+ 0000 71C0              or F,-64
+ 0002 08                push A
+ 0003 5DD0              mov A,REG[0xd0]
+ 0005 08                push A
+ 0006                   .dbline 23
+ 0006           ; #pragma interrupt_handler Timer_ISR
+ 0006           ; 
+ 0006           ; /* Timer ISR in C where timer interrupts are processed */
+ 0006           ; unsigned int i_msec = 0;
+ 0006           ; unsigned int i_sec = 0;
+ 0006           ; unsigned int i_min = 0;
+ 0006           ; unsigned int i_hour = 0;
+ 0006           ; unsigned int cnt_sec = 0;
+ 0006           ; unsigned int cnt_min = 0;
+ 0006           ; unsigned int cnt_hour = 0;
+ 0006           ; unsigned int downCount = 10;
+ 0006           ; unsigned int dumCount = 5;
+ 0006           ; unsigned int dispCount = 2;
+ 0006           ; 
+ 0006           ; extern unsigned int mat_flag;
+ 0006           ; extern unsigned int temp_value;
+ 0006           ; extern unsigned int mode_check_count;
+ 0006           ; extern unsigned int downcountFlag;
+ 0006           ; extern unsigned int dumflag;
+ 0006           ; extern unsigned int dispflag;
+ 0006           ; 
+ 0006           ; void Timer_ISR(void)
+ 0006           ; {
+ 0006                   .dbline 24
+ 0006           ;       i_msec = i_msec + 1;
+ 0006 62D000            mov REG[0xd0],>_i_msec
+ 0009 7601              inc [_i_msec+1]
+ 000B 0E0000            adc [_i_msec],0
+ 000E                   .dbline 26
+ 000E           ;       
+ 000E           ;       asm (" NOP");
+ 000E 40                         NOP
+ 000F           
+ 000F                   .dbline 27
+ 000F           ;       asm (" NOP");
+ 000F 40                         NOP
+ 0010           
+ 0010                   .dbline 29
+ 0010           ;       
+ 0010           ;       if (i_msec >= 1000)
+ 0010 5101              mov A,[_i_msec+1]
+ 0012 11E8              sub A,-24
+ 0014 5100              mov A,[_i_msec]
+ 0016 1903              sbb A,3
+ 0018 C091              jc L2
+ 001A           X0:
+ 001A                   .dbline 31
+ 001A           ;       {
+ 001A           ;               i_sec = i_sec + 1;
+ 001A                   .dbline 31
+ 001A 62D000            mov REG[0xd0],>_i_sec
+ 001D 7601              inc [_i_sec+1]
+ 001F 0E0000            adc [_i_sec],0
+ 0022                   .dbline 32
+ 0022           ;               i_msec = 0;
+ 0022 62D000            mov REG[0xd0],>_i_msec
+ 0025 550100            mov [_i_msec+1],0
+ 0028 550000            mov [_i_msec],0
+ 002B                   .dbline 33
+ 002B           ;               if (mat_flag == 1)
+ 002B 62D000            mov REG[0xd0],>_mat_flag
+ 002E 3C0000            cmp [_mat_flag],0
+ 0031 B00E              jnz L4
+ 0033 3C0101            cmp [_mat_flag+1],1
+ 0036 B009              jnz L4
+ 0038           X1:
+ 0038                   .dbline 34
+ 0038           ;                       cnt_sec = cnt_sec + 1;
+ 0038 62D000            mov REG[0xd0],>_cnt_sec
+ 003B 7601              inc [_cnt_sec+1]
+ 003D 0E0000            adc [_cnt_sec],0
+ 0040           L4:
+ 0040                   .dbline 35
+ 0040           ;               if (dumflag == 1)
+ 0040 62D000            mov REG[0xd0],>_dumflag
+ 0043 3C0000            cmp [_dumflag],0
+ 0046 B00E              jnz L6
+ 0048 3C0101            cmp [_dumflag+1],1
+ 004B B009              jnz L6
+ 004D           X2:
+ 004D                   .dbline 36
+ 004D           ;                       dumCount--;
+ 004D 62D000            mov REG[0xd0],>_dumCount
+ 0050 7A01              dec [_dumCount+1]
+ 0052 1E0000            sbb [_dumCount],0
+ 0055           L6:
+ 0055                   .dbline 37
+ 0055           ;               if (temp_value == 1)
+ 0055 62D000            mov REG[0xd0],>_temp_value
+ 0058 3C0000            cmp [_temp_value],0
+ 005B B00E              jnz L8
+ 005D 3C0101            cmp [_temp_value+1],1
+ 0060 B009              jnz L8
+ 0062           X3:
+ 0062                   .dbline 38
+ 0062           ;                       mode_check_count = mode_check_count + 1;
+ 0062 62D000            mov REG[0xd0],>_mode_check_count
+ 0065 7601              inc [_mode_check_count+1]
+ 0067 0E0000            adc [_mode_check_count],0
+ 006A           L8:
+ 006A                   .dbline 39
+ 006A           ;               if (mode_check_count >= 10)
+ 006A 62D000            mov REG[0xd0],>_mode_check_count
+ 006D 5101              mov A,[_mode_check_count+1]
+ 006F 110A              sub A,10
+ 0071 5100              mov A,[_mode_check_count]
+ 0073 1900              sbb A,0
+ 0075 C00A              jc L10
+ 0077           X4:
+ 0077                   .dbline 40
+ 0077           ;                       mode_check_count = 0;
+ 0077 62D000            mov REG[0xd0],>_mode_check_count
+ 007A 550100            mov [_mode_check_count+1],0
+ 007D 550000            mov [_mode_check_count],0
+ 0080           L10:
+ 0080                   .dbline 41
+ 0080           ;               if (downcountFlag == 1)
+ 0080 62D000            mov REG[0xd0],>_downcountFlag
+ 0083 3C0000            cmp [_downcountFlag],0
+ 0086 B00E              jnz L12
+ 0088 3C0101            cmp [_downcountFlag+1],1
+ 008B B009              jnz L12
+ 008D           X5:
+ 008D                   .dbline 42
+ 008D           ;                       downCount--;
+ 008D 62D000            mov REG[0xd0],>_downCount
+ 0090 7A01              dec [_downCount+1]
+ 0092 1E0000            sbb [_downCount],0
+ 0095           L12:
+ 0095                   .dbline 43
+ 0095           ;               if      (dispflag == 1)
+ 0095 62D000            mov REG[0xd0],>_dispflag
+ 0098 3C0000            cmp [_dispflag],0
+ 009B B00E              jnz L14
+ 009D 3C0101            cmp [_dispflag+1],1
+ 00A0 B009              jnz L14
+ 00A2           X6:
+ 00A2                   .dbline 44
+ 00A2           ;                       dispCount--;
+ 00A2 62D000            mov REG[0xd0],>_dispCount
+ 00A5 7A01              dec [_dispCount+1]
+ 00A7 1E0000            sbb [_dispCount],0
+ 00AA           L14:
+ 00AA                   .dbline 45
+ 00AA           ;       }
+ 00AA           L2:
+ 00AA                   .dbline 47
+ 00AA           ;       
+ 00AA           ;       asm (" NOP");
+ 00AA 40                         NOP
+ 00AB           
+ 00AB                   .dbline 48
+ 00AB           ;       asm (" NOP");
+ 00AB 40                         NOP
+ 00AC           
+ 00AC                   .dbline 50
+ 00AC           ;       
+ 00AC           ;       if ( i_sec >= 60)
+ 00AC 62D000            mov REG[0xd0],>_i_sec
+ 00AF 5101              mov A,[_i_sec+1]
+ 00B1 113C              sub A,60
+ 00B3 5100              mov A,[_i_sec]
+ 00B5 1900              sbb A,0
+ 00B7 C012              jc L16
+ 00B9           X7:
+ 00B9                   .dbline 52
+ 00B9           ;       {
+ 00B9           ;               i_min = i_min + 1;
+ 00B9                   .dbline 52
+ 00B9 62D000            mov REG[0xd0],>_i_min
+ 00BC 7601              inc [_i_min+1]
+ 00BE 0E0000            adc [_i_min],0
+ 00C1                   .dbline 53
+ 00C1           ;               i_sec = 0;
+ 00C1 62D000            mov REG[0xd0],>_i_sec
+ 00C4 550100            mov [_i_sec+1],0
+ 00C7 550000            mov [_i_sec],0
+ 00CA                   .dbline 54
+ 00CA           ;       }
+ 00CA           L16:
+ 00CA                   .dbline 56
+ 00CA           ; 
+ 00CA           ;       if ( cnt_sec >= 60)
+ 00CA 62D000            mov REG[0xd0],>_cnt_sec
+ 00CD 5101              mov A,[_cnt_sec+1]
+ 00CF 113C              sub A,60
+ 00D1 5100              mov A,[_cnt_sec]
+ 00D3 1900              sbb A,0
+ 00D5 C012              jc L18
+ 00D7           X8:
+ 00D7                   .dbline 59
+ 00D7           ;       {
+ 00D7           ; 
+ 00D7           ;               cnt_min = cnt_min + 1;
+ 00D7                   .dbline 59
+ 00D7 62D000            mov REG[0xd0],>_cnt_min
+ 00DA 7601              inc [_cnt_min+1]
+ 00DC 0E0000            adc [_cnt_min],0
+ 00DF                   .dbline 60
+ 00DF           ;               cnt_sec = 0;
+ 00DF 62D000            mov REG[0xd0],>_cnt_sec
+ 00E2 550100            mov [_cnt_sec+1],0
+ 00E5 550000            mov [_cnt_sec],0
+ 00E8                   .dbline 61
+ 00E8           ;       }
+ 00E8           L18:
+ 00E8                   .dbline 64
+ 00E8           ; 
+ 00E8           ; 
+ 00E8           ;       asm (" NOP");
+ 00E8 40                         NOP
+ 00E9           
+ 00E9                   .dbline 65
+ 00E9           ;       asm (" NOP");
+ 00E9 40                         NOP
+ 00EA           
+ 00EA                   .dbline 67
+ 00EA           ;       
+ 00EA           ;       if (i_min >= 60)
+ 00EA 62D000            mov REG[0xd0],>_i_min
+ 00ED 5101              mov A,[_i_min+1]
+ 00EF 113C              sub A,60
+ 00F1 5100              mov A,[_i_min]
+ 00F3 1900              sbb A,0
+ 00F5 C012              jc L20
+ 00F7           X9:
+ 00F7                   .dbline 69
+ 00F7           ;       {
+ 00F7           ;               i_hour = i_hour + 1;
+ 00F7                   .dbline 69
+ 00F7 62D000            mov REG[0xd0],>_i_hour
+ 00FA 7601              inc [_i_hour+1]
+ 00FC 0E0000            adc [_i_hour],0
+ 00FF                   .dbline 70
+ 00FF           ;               i_min = 0;
+ 00FF 62D000            mov REG[0xd0],>_i_min
+ 0102 550100            mov [_i_min+1],0
+ 0105 550000            mov [_i_min],0
+ 0108                   .dbline 71
+ 0108           ;       }
+ 0108           L20:
+ 0108                   .dbline 72
+ 0108           ;       if (cnt_min >= 60)
+ 0108 62D000            mov REG[0xd0],>_cnt_min
+ 010B 5101              mov A,[_cnt_min+1]
+ 010D 113C              sub A,60
+ 010F 5100              mov A,[_cnt_min]
+ 0111 1900              sbb A,0
+ 0113 C012              jc L22
+ 0115           X10:
+ 0115                   .dbline 74
+ 0115           ;       {
+ 0115           ;               cnt_hour = cnt_hour + 1;
+ 0115                   .dbline 74
+ 0115 62D000            mov REG[0xd0],>_cnt_hour
+ 0118 7601              inc [_cnt_hour+1]
+ 011A 0E0000            adc [_cnt_hour],0
+ 011D                   .dbline 75
+ 011D           ;               cnt_min = 0;
+ 011D 62D000            mov REG[0xd0],>_cnt_min
+ 0120 550100            mov [_cnt_min+1],0
+ 0123 550000            mov [_cnt_min],0
+ 0126                   .dbline 76
+ 0126           ;       }
+ 0126           L22:
+ 0126                   .dbline 78
+ 0126           ;       
+ 0126           ;       asm (" NOP");
+ 0126 40                         NOP
+ 0127           
+ 0127                   .dbline 79
+ 0127           ;       asm (" NOP");
+ 0127 40                         NOP
+ 0128           
+ 0128                   .dbline 81
+ 0128           ;       
+ 0128           ;       if (i_hour == 99)
+ 0128 62D000            mov REG[0xd0],>_i_hour
+ 012B 3C0000            cmp [_i_hour],0
+ 012E B00F              jnz L24
+ 0130 3C0163            cmp [_i_hour+1],99
+ 0133 B00A              jnz L24
+ 0135           X11:
+ 0135                   .dbline 82
+ 0135           ;               i_hour = 0;                     // Re Starting count after 99 hours
+ 0135 62D000            mov REG[0xd0],>_i_hour
+ 0138 550100            mov [_i_hour+1],0
+ 013B 550000            mov [_i_hour],0
+ 013E           L24:
+ 013E                   .dbline 83
+ 013E           ;       if (cnt_hour == 99)
+ 013E 62D000            mov REG[0xd0],>_cnt_hour
+ 0141 3C0000            cmp [_cnt_hour],0
+ 0144 B00F              jnz L26
+ 0146 3C0163            cmp [_cnt_hour+1],99
+ 0149 B00A              jnz L26
+ 014B           X12:
+ 014B                   .dbline 84
+ 014B           ;               cnt_hour = 0;   
+ 014B 62D000            mov REG[0xd0],>_cnt_hour
+ 014E 550100            mov [_cnt_hour+1],0
+ 0151 550000            mov [_cnt_hour],0
+ 0154           L26:
+ 0154                   .dbline 86
+ 0154           ;       
+ 0154           ;       asm (" NOP");
+ 0154 40                         NOP
+ 0155           
+ 0155                   .dbline 87
+ 0155           ;       asm (" NOP");
+ 0155 40                         NOP
+ 0156           
+ 0156                   .dbline -2
+ 0156           L1:
+ 0156 18                pop A
+ 0157 60D0              mov REG[208],A
+ 0159 18                pop A
+ 015A                   .dbline 0 ; func end
+ 015A 7E                reti
+ 015B                   .dbend
